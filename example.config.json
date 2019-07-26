@@ -1,0 +1,28 @@
+{
+  "URL": "http://localhost",
+  "URL_PANEL": "http://localhost/panel",
+  "DATABASE": {
+    "HOST": "localhost",
+    "NAME": "database",
+    "CHARSET": "utf8",
+    "USER": "root",
+    "PASSWORD": "root"
+  },
+  "MAIL": {
+    "HOST": "example.com",
+    "PORT": 465,
+    "SECURITY_PROTOCOL":"ssl",
+    "LANG_CODE": "tr",
+    "CHARSET": "utf-8",
+    "ADDRESS": "example@example.com",
+    "PASSWORD": "pass"
+    },
+  "ADMIN":{
+    "MAIL":"example@example.com"
+  },
+  "DEFAULTS":{
+    "CLASS":"main",
+    "ACTION":"show",
+    "LAYOUT":"layout.html"
+  }
+}
