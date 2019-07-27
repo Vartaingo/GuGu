@@ -4,7 +4,7 @@ namespace System;
 class Config{
 
   private $config;
-  
+
   public function __construct()
   {
     $this->config = json_decode(file_get_contents(CONFIG_FILE), true);
@@ -16,10 +16,6 @@ class Config{
 
   public function getUrl(){
     return $this->config["URL"];
-  }
-
-  public function getPanelUrl(){
-    return $this->config["URL_PANEL"];
   }
 
   public function getDatabaseConfig(){
