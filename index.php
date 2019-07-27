@@ -1,6 +1,6 @@
 <?php
 use System\Core;
-use System\Model;
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
@@ -26,9 +26,6 @@ define("VIEWS_DIR",SYS_DIR."/views");
 
 //Controller Directory
 define("CONTROLLERS_DIR",SYS_DIR."/controllers");
-
-//Resources Directory
-define("RESOURCES_DIR",APP_DIR."/resources");
 
 //Modules Directory
 define("MODULES_DIR",SYS_DIR."/modules");
