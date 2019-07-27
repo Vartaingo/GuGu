@@ -4,8 +4,6 @@ use System\Core;
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-/**Constants**/
-
 //Application Directory
 define("APP_DIR",__DIR__);
 
