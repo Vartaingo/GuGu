@@ -34,7 +34,7 @@ Application
 └──config.json
 ```
 ### Config.json
-config.json file must be like this.
+config.json file example.
 ```json
 {
   "URL": "http://localhost",
@@ -54,9 +54,6 @@ config.json file must be like this.
     "ADDRESS": "example@example.com",
     "PASSWORD": "pass"
     },
-  "ADMIN":{
-    "MAIL":"example@example.com"
-  },
   "DEFAULTS":{
     "CLASS":"main",
     "ACTION":"show",
