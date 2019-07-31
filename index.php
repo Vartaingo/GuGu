@@ -29,7 +29,7 @@ define("CONTROLLERS_DIR",SYS_DIR."/controllers");
 define("MODULES_DIR",SYS_DIR."/modules");
 
 //System Modules Directory
-define("SYS_MODULES_DIR",SYS_DIR."/modules/system");
+define("SYS_MODULES_DIR",MODULES_DIR."/system");
 
 //Include Core Classes
 require_once CORE_DIR."/config.php";
