@@ -10,7 +10,7 @@ class communicationModule{
     $this->config = $config;
   }
 
-  public function sendMail(string $title, string $subject, string $message, string $whom = $this->config["ADMIN"]["MAIL"]){
+  public function sendMail(string $title, string $subject, string $message, string $whom){
     include_once(MODULES_DIR . "/phpMailer/class.phpmailer.php");
     $mailConfig = $this->config["MAIL"];
     $mail = new PHPMailer();
