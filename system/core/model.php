@@ -5,6 +5,7 @@ use System\Core;
 use Modules\stringProcessingModule;
 use Modules\communicationModule;
 
+/** In this class you can add external modules for your web project and you can able to access them from your model file. **/
 class Model extends Core
 {
 
@@ -18,3 +19,4 @@ class Model extends Core
 		return new communicationModule($this->getConfig());
 	}
 }
+?>
