@@ -10,7 +10,7 @@ class urlManagerModule{
 
   public function E404()
   {
-  	header("Location:" . $this->url . '/404');
+  	exit(header("Location:" . $this->url . '/404'));
   }
 
 }
