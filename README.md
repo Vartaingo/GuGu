@@ -34,7 +34,7 @@ Application
 └──config.json
 ```
 ### Config.json
-Config.json file must be like this.
+config.json file must be like this.
 ```json
 {
   "URL": "http://localhost",
