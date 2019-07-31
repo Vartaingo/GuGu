@@ -1,6 +1,5 @@
 {
   "URL": "http://localhost",
-  "URL_PANEL": "http://localhost/panel",
   "DATABASE": {
     "HOST": "localhost",
     "NAME": "database",
