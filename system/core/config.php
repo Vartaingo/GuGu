@@ -36,8 +36,5 @@ class Config{
     return $this->config["DEFAULTS"];
   }
 
-  public function getAdminInfo(){
-    return $this->config["ADMIN"];
-  }
 }
 ?>
