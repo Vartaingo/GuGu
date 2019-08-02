@@ -25,7 +25,7 @@ class Core extends Config
 
   /** Start the system and get url parameters from getParams() function. **/
   public function start(){
-      $this->run($this->getParams());
+      $this->route($this->getParams());
   }
 
   /** Get parameters from url. **/
@@ -42,7 +42,7 @@ class Core extends Config
   }
 
 /** Call the controller file and check if there are a class name and function in the file, if it isn't show 404 error page. **/
-  private function run(array $params)
+  private function route(array $params)
   {
       $controllerClass = $params["class"] . "Controller"; // Merge class name and "Controller" string because all controller files are ending with "Controller".
       if (file_exists($file = CONTROLLERS_DIR . "/{$controllerClass}.php")) { // Check if file exists then if exists include it for once.
