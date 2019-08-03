@@ -1,6 +1,8 @@
 <?php
 namespace System\Modules;
 
+use \PDO;
+
 class databaseManagerModule
 {
 
@@ -9,7 +11,7 @@ class databaseManagerModule
     public function __construct(array $databaseConfig)
     {
         $database_dsn = sprintf("mysql:host=%s; databasename=%s; charset=%s", $databaseConfig["HOST"], $databaseConfig["NAME"], $databaseConfig["CHARSET"]);
-        $this->database = new \PDO($database_dsn, $databaseConfig["USER"], $databaseConfig["PASSWORD"]);
+        $this->database = new PDO($database_dsn, $databaseConfig["USER"], $databaseConfig["PASSWORD"]);
     }
 
     public function fetch(string $query, bool $numerical = False, array $params = [])
