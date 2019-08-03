@@ -10,7 +10,7 @@ class databaseManagerModule
 
     public function __construct(array $databaseConfig)
     {
-        $database_dsn = sprintf("mysql:host=%s; databasename=%s; charset=%s", $databaseConfig["HOST"], $databaseConfig["NAME"], $databaseConfig["CHARSET"]);
+        $database_dsn = sprintf("mysql:host=%s; dbname=%s; charset=%s", $databaseConfig["HOST"], $databaseConfig["NAME"], $databaseConfig["CHARSET"]);
         $this->database = new PDO($database_dsn, $databaseConfig["USER"], $databaseConfig["PASSWORD"]);
     }
 
