@@ -10,18 +10,15 @@
   "MAIL": {
     "HOST": "example.com",
     "PORT": 465,
-    "SECURITY_PROTOCOL":"ssl",
+    "SECURITY_PROTOCOL": "ssl",
     "LANG_CODE": "tr",
     "CHARSET": "utf-8",
     "ADDRESS": "example@example.com",
     "PASSWORD": "pass"
-    },
-  "ADMIN":{
-    "MAIL":"example@example.com"
   },
-  "DEFAULTS":{
-    "CLASS":"main",
-    "ACTION":"show",
-    "LAYOUT":"layout.html"
+  "DEFAULTS": {
+    "CLASS": "main",
+    "ACTION": "show",
+    "LAYOUT": "layout.html"
   }
 }
