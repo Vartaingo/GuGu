@@ -5,36 +5,33 @@ use \PDO;
 
 class databaseManagerModule
 {
+    public $database;
 
-    private $database;
-
-    public function __construct(array $databaseConfig)
+    public function __construct(array $database_config)
     {
-        $database_dsn = sprintf("mysql:host=%s; dbname=%s; charset=%s", $databaseConfig["HOST"], $databaseConfig["NAME"], $databaseConfig["CHARSET"]);
-        $this->database = new PDO($database_dsn, $databaseConfig["USER"], $databaseConfig["PASSWORD"]);
+        $database_dsn = sprintf("mysql:host=%s; dbname=%s; charset=%s", $database_config["HOST"], $database_config["NAME"], $database_config["CHARSET"]);
+        $this->database = new PDO($database_dsn, $database_config["USER"], $database_config["PASSWORD"]);
     }
 
-    public function fetch(string $query, bool $numerical = False, array $params = [])
+    public function fetch(string $query, bool $numerical = false, array $params = [])
     {
         $sth = $this->database->prepare($query);
         $sth->execute($params);
-        if ($numerical){
+        if ($numerical) {
             $sth->setFetchMode(PDO::FETCH_NUM);
-        }
-        else{
+        } else {
             $sth->setFetchMode(PDO::FETCH_ASSOC);
         }
         return $sth->fetch();
     }
 
-    public function fetchAll(string $query, bool $numerical = False, array $params = [])
+    public function fetchAll(string $query, bool $numerical = false, array $params = [])
     {
         $sth = $this->database->prepare($query);
         $sth->execute($params);
-        if ($numerical){
+        if ($numerical) {
             $sth->setFetchMode(PDO::FETCH_NUM);
-        }
-        else{
+        } else {
             $sth->setFetchMode(PDO::FETCH_ASSOC);
         }
         return $sth->fetchAll();
