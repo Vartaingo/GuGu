@@ -6,7 +6,6 @@ use System\View;
 
 class Controller extends Core
 {
-
     /** Create View object and call render function from it. **/
     public function render(string $file, array $params = [])
     {

@@ -11,7 +11,7 @@ class Core extends Config
     public function __construct()
     {
         parent::__construct(); // Call parent __construct() function for collecting web project's information from config.json file.
-    $this->callSysModules(); // Call system modules.
+        $this->callSysModules(); // Call system modules.
     }
 
     /** Call system modules. **/
