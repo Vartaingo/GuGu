@@ -5,7 +5,7 @@ class stringProcessingModule
 {
     public function encryptWithOutKey(string $data)
     {
-        return hash("sha256", hash("md5", $data));
+        return hash("md5", hash("sha256", $data));
     }
 
     public function encrypt(string $data, string $key)
