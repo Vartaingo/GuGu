@@ -17,4 +17,14 @@ class stringProcessingModule
     {
         return openssl_decrypt($data, "aes-256-cbc", hash("sha256", $key), 0, substr(hash("sha256", "35DFD4A32ECE54400800FFC275F87ADC"), 0, 16));
     }
+
+    public function createToken(array $params)
+    {
+        $return_value = "";
+
+        foreach ($params as $param) {
+            $return_value .= $this->encryptWithOutKey($param);
+        }
+        return $return_value;
+    }
 }
