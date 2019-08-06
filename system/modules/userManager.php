@@ -10,6 +10,7 @@ class userManagerModule
     }
     public function login($user, $password, $remember = false)
     {
+        $password = $this->stringProcessor->encryptWithOutKey($password);
         if (!$this->isLoggedIn() && $password == $this->databaseManager->fetch("SELECT password FROM users WHERE name=?", true, array($user))[0]) {
             $token = $this->stringProcessor->createToken(array($user,$password));
             $_SESSION["USER"] = $token;
