@@ -1,6 +1,8 @@
 <?php
 namespace Modules;
 
+use \PHPMailer;
+
 class communicationModule
 {
     private $config;
