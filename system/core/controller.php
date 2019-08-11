@@ -7,9 +7,9 @@ use System\View;
 class Controller extends Core
 {
     /** Create View object and call render function from it. **/
-    public function render(string $file, array $params = [])
+    public function render(string $file, array $params = [], $layout = null)
     {
-        (new View)->render($file, $params);
+        (new View)->render($file, $params, $layout);
     }
 
     /** If model file exists return the model class, if it isn't show error. **/
